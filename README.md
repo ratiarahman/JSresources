@@ -1,7 +1,7 @@
 # JSresources
 alert("Done sleeping Now. JavaScript for Cats!!")(semicolon)
 
-Udemy Course: ZeroToMastery by Andrei Neagoie 
+Udemy Course: ZeroToMastery by Andrei Neagoie <br> 
 https://www.udemy.com/the-complete-web-developer-zero-to-mastery/
 
 JavaScript For Cats: http://jsforcats.com/
