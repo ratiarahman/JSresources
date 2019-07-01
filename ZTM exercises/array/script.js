@@ -1,8 +1,8 @@
 function learning(){
 	var array = ["Banana","Apples","Oranges","Blueberries"];
-	array.shift();
-    array.sort();
-    array.push("Kiwi");
+	array.shift(); //removing banana from array
+    array.sort(); //sorting
+    array.push("Kiwi"); //adding a fruit at the end
     array.splice(0,1);
     array.reverse();
 	document.getElementById("open").innerHTML = array;
@@ -13,11 +13,30 @@ function learning(){
 
 }
 
-//removing banana from array
-// array.shift();
 
-//sorting
-// array.sort();
+//creating object
+var login ={
+		username: "andrei",
+		password: "supersecret"
+	}
+var klk = [
+	{
+		username: "andrei",
+		password: "supersecret"
+	}
+];
 
-//adding a fruit at the end
-// array.push("Kiwi");
+var newsfeed = [
+	{
+		username: "ratia",
+		password: "lol"
+	},
+	{
+		username: "Sally",
+		password: "lul"
+	},
+	{
+		username: "Mitch",
+		password: "lel"
+	}
+];
