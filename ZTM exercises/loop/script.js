@@ -13,11 +13,17 @@ for(var i=0; i<loop.length; i++){
 
 
 //while loop
-var counter = 0;
-while(counter< loop.length){
+
+var okay = function (){
+	var counter = 0;
+	while(counter< loop.length){
 	console.log(loop[counter],counter);
+	// document.getElementById("demo").innerHTML = loop[counter];
 	counter++;
+	}
 }
+// document.getElementById("demo").innerHTML = okay();
+
 
 //do,while loop //reverse way 
 var anotherCounter = loop.length-1;
