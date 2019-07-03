@@ -15,9 +15,38 @@ for(var i=0; i<loop.length; i++){
 //while loop
 var counter = 0;
 while(counter< loop.length){
-	console.log(loop[counter]);
+	console.log(loop[counter],counter);
 	counter++;
 }
+
+//do,while loop //reverse way 
+var anotherCounter = loop.length-1;
+do{
+	console.log(loop[anotherCounter]);
+	anotherCounter--;
+}while(anotherCounter>=0);
+
+//forEach loop
+loop.forEach(function(item,i){
+	console.log(item,i);
+}) 
+
+//this way we can use the name of function, so better way 
+function forEachLoop(item,i){
+	console.log(item,i);
+}
+
+var array = [
+	"hi!",
+	"hello",
+	"chao",
+	"bye",
+	"adios"
+];
+
+loop.forEach(forEachLoop);
+array.forEach(forEachLoop);
+
 
 //popping out all the items from loop array
 // var loopLength = loop.length;
