@@ -52,7 +52,7 @@ function isUserValid(u,p){
 
 function signIn(user, pass){
 	if (isUserValid(user,pass)) {
-		// document.getElementById("login").innerHTML = newsfeed;
+		document.getElementById("login").innerHTML = newsfeed;
 		console.log(newsfeed);
 	}
 	else{
