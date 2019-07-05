@@ -7,6 +7,8 @@ var button = document.getElementsByTagName("button")[1];
 var ul = document.querySelector("ul");
 var input = document.getElementById("inputItem")
 
+var li = document.createElement("li");
+
 //DRY:DON'T REPEAT YOURSELF
 function inputLength(){
 	return input.value.length;
@@ -35,4 +37,11 @@ function KeyEvent(event){                       //keypress event //event.keyCode
 
 button.addEventListener("click", clickEvent)
 
-input.addEventListener("keypress", KeyEvent
+input.addEventListener("keypress", KeyEvent)
+
+var del = document.getElementById("delete");
+
+del.addEventListener("click", function(){
+	// ul.parentNode.removeChild(li);
+	createListElement(li).remove();
+})
