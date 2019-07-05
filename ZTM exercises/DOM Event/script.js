@@ -7,7 +7,8 @@ var button = document.getElementsByTagName("button")[1];
 var ul = document.querySelector("ul");
 var input = document.getElementById("inputItem")
 
-var li = document.createElement("li");
+// var li = document.createElement("li");
+
 
 //DRY:DON'T REPEAT YOURSELF
 function inputLength(){
@@ -41,7 +42,18 @@ input.addEventListener("keypress", KeyEvent)
 
 var del = document.getElementById("delete");
 
-del.addEventListener("click", function(){
+function dele(){
 	// ul.parentNode.removeChild(li);
-	createListElement(li).remove();
-})
+	
+	// console.log(ul.length);
+	var list = document.querySelector("li");
+	// console.log(list.length);
+	list.remove(list[3]);
+	// console.log(list.length);
+
+}
+
+
+
+del.addEventListener("click", dele);
+	
