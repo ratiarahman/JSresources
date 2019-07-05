@@ -10,5 +10,7 @@ https://www.w3schools.com/jsref/jsref_obj_array.asp<br>
 
 https://www.w3schools.com/js/js_htmldom.asp<br>
 
-Events Reference: https://developer.mozilla.org/en-US/docs/Web/Events
+Events Reference: https://developer.mozilla.org/en-US/docs/Web/Events<br>
+
+Key Codes: https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
 
