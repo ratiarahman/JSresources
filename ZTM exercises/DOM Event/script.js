@@ -17,8 +17,11 @@ function inputLength(){
 
 function createListElement(){
 	var li = document.createElement("li");
+	var butt = document.createElement("button");
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
+	li.appendChild(butt);
+	butt.innerHTML = "Delete";
 	input.value = "";
 }
 
@@ -36,9 +39,24 @@ function KeyEvent(event){                       //keypress event //event.keyCode
 	}
 }
 
+function buttonListEvent(){
+	var btn = document.querySelectorAll('li button');
+btn.addEventListener("click", function(){
+	for(var i=0; i<li.length; i++){
+		this.parentNode.remove()
+	}
+})
+}
+
+
 button.addEventListener("click", clickEvent)
 
 input.addEventListener("keypress", KeyEvent)
+
+
+
+
+//deleting list item
 
 var del = document.getElementById("delete");
 
