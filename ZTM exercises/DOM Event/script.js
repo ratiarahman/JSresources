@@ -74,4 +74,9 @@ function dele(){
 
 
 del.addEventListener("click", dele);
+
+
+const a = "beep";
+const b = "boop";
+console.log(a+b && b);
 	
