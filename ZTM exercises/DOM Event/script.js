@@ -1,3 +1,5 @@
+// import {DeleteList()} from 'app';
+
 function myFunction(){
 	// console.log("clicked");
 	document.getElementById("click").innerHTML = "Clicked";
@@ -5,10 +7,12 @@ function myFunction(){
 
 var button = document.getElementsByTagName("button")[1];
 var ul = document.querySelector("ul");
-var input = document.getElementById("inputItem")
+var input = document.getElementById("inputItem");
+var li = document.getElementsByTagName("li");
+var div = document.getElementById("div");
 
 // var li = document.createElement("li");
-
+DeleteList();
 
 //DRY:DON'T REPEAT YOURSELF
 function inputLength(){
@@ -17,12 +21,16 @@ function inputLength(){
 
 function createListElement(){
 	var li = document.createElement("li");
-	var butt = document.createElement("button");
+	var button = document.createElement("button");
 	li.appendChild(document.createTextNode(input.value));
 	ul.appendChild(li);
-	li.appendChild(butt);
-	butt.innerHTML = "Delete";
+	li.appendChild(button);
+	button.innerHTML = "Delete";
 	input.value = "";
+	DeleteList();
+	// var att =document.createAttribute("class");
+	// att.value="demo";
+	// button.setAttributeNode(att);
 }
 
 function clickEvent(){                          //mouse event 
@@ -39,44 +47,47 @@ function KeyEvent(event){                       //keypress event //event.keyCode
 	}
 }
 
-function buttonListEvent(){
-	var btn = document.querySelectorAll('li button');
-btn.addEventListener("click", function(){
-	for(var i=0; i<li.length; i++){
-		this.parentNode.remove()
-	}
-})
-}
 
 
 button.addEventListener("click", clickEvent)
 
 input.addEventListener("keypress", KeyEvent)
 
-
-
-
 //deleting list item
 
 var del = document.getElementById("delete");
 
-function dele(){
-	// ul.parentNode.removeChild(li);
-	
+function dlt(){
+	// ul.parentNode.removeChild(li);	
 	// console.log(ul.length);
-	var list = document.querySelector("li");
+	var list = document.querySelector("ul");
 	// console.log(list.length);
-	list.remove(list[3]);
-	// console.log(list.length);
+	list.remove();
+	var ul = document.createElement("ul");
+	// ul.appendChild(createListElement);
+}
+del.addEventListener("click", dlt);
 
+function DeleteList(){
+	var button = document.querySelectorAll('li button');
+ 	for (var i = 0; i<button.length; i++) {
+ 		button[i].addEventListener("click", Delete);
+ 	}
+ }
+
+ 	function Delete(){
+ 		for (var i = 0; i<li.length; i++) {
+ 		this.parentNode.remove();
+ 		}
 }
 
-
-
-del.addEventListener("click", dele);
-
-
-const a = "beep";
-const b = "boop";
-console.log(a+b && b);
+ // const a = "beep";
+// const b = "boop";
+// console.log(a+b && b); //return b
+// console.log(a && b); //return b
+// console.log(a && a+b); //return a+b
+// console.log(b && a); //return a
 	
+
+
+
