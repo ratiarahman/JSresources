@@ -2,17 +2,28 @@
 
 function myFunction(){
 	// console.log("clicked");
-	document.getElementById("click").innerHTML = "Clicked";
+	document.getElementById("click").innerHTML = 'Clicked';
 }
 
 var button = document.getElementsByTagName("button")[1];
 var ul = document.querySelector("ul");
 var input = document.getElementById("inputItem");
 var li = document.getElementsByTagName("li");
-var div = document.getElementById("div");
+
+// var div = document.getElementById("div");
 
 // var li = document.createElement("li");
-DeleteList();
+
+function createDeleteButton() {
+    for (var i = 0; i < li.length; i++) {
+        var createDeleteButton = document.createElement("button"); 
+        li[i].appendChild(createDeleteButton);
+        createDeleteButton.innerHTML = "Delete";
+        DeleteList();
+    }
+}
+
+// DeleteList();
 
 //DRY:DON'T REPEAT YOURSELF
 function inputLength(){
@@ -69,9 +80,9 @@ function dlt(){
 del.addEventListener("click", dlt);
 
 function DeleteList(){
-	var button = document.querySelectorAll('li button');
- 	for (var i = 0; i<button.length; i++) {
- 		button[i].addEventListener("click", Delete);
+	var listButton = document.querySelectorAll('li button');
+ 	for (var i = 0; i<listButton.length; i++) {
+ 		listButton[i].addEventListener("click", Delete);
  	}
  }
 
@@ -81,6 +92,7 @@ function DeleteList(){
  		}
 }
 
+createDeleteButton()
  // const a = "beep";
 // const b = "boop";
 // console.log(a+b && b); //return b
