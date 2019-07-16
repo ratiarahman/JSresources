@@ -1,5 +1,12 @@
-.list{
+li {
+	text-transform: capitalize;
+	list-style-type: none;
+	margin-right: 1250px;
+	/*border-right: 2px solid black;*/
 	display: flex;
 	justify-content: space-between;
-	margin: 6px;
+	margin:10px;
+}
+ul{
+	width: 15%;
 }

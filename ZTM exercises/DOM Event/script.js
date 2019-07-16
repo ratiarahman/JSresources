@@ -69,13 +69,9 @@ input.addEventListener("keypress", KeyEvent)
 var del = document.getElementById("delete");
 
 function dlt(){
-	// ul.parentNode.removeChild(li);	
-	// console.log(ul.length);
-	var list = document.querySelector("ul");
-	// console.log(list.length);
-	list.remove();
-	var ul = document.createElement("ul");
-	// ul.appendChild(createListElement);
+	
+	ul.innerHTML= "";
+	
 }
 del.addEventListener("click", dlt);
 
@@ -86,14 +82,16 @@ function DeleteList(){
  	}
  }
 
- 	function Delete(){
+function Delete(){
  		for (var i = 0; i<li.length; i++) {
  		this.parentNode.remove();
  		}
 }
 
-createDeleteButton()
- // const a = "beep";
+createDeleteButton();
+
+
+// const a = "beep";
 // const b = "boop";
 // console.log(a+b && b); //return b
 // console.log(a && b); //return b
