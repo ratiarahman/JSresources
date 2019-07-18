@@ -30,6 +30,7 @@ function inputLength(){
 	return input.value.length;
 }
 
+
 function createListElement(){
 	var li = document.createElement("li");
 	var button = document.createElement("button");
@@ -39,10 +40,16 @@ function createListElement(){
 	button.innerHTML = "Delete";
 	input.value = "";
 	DeleteList();
+	// sessionStorage.setItem("autosave", li);
 	// var att =document.createAttribute("class");
 	// att.value="demo";
 	// button.setAttributeNode(att);
 }
+
+// if (sessionStorage.getItem("autosave")) {
+// 	li = sessionStorage.getItem("autosave");
+// }
+
 
 function clickEvent(){                          //mouse event 
 	// console.log("Yeah! It works");
@@ -69,8 +76,8 @@ input.addEventListener("keypress", KeyEvent)
 var del = document.getElementById("delete");
 
 function dlt(){
-	
-	ul.innerHTML= "";
+
+	ul.innerHTML = "";
 	
 }
 del.addEventListener("click", dlt);
