@@ -40,12 +40,14 @@ function createListElement(){
 	button.innerHTML = "Delete";
 	input.value = "";
 	DeleteList();
-	// sessionStorage.setItem("autosave", li);
+	
 	// var att =document.createAttribute("class");
 	// att.value="demo";
 	// button.setAttributeNode(att);
 }
 
+sessionStorage.setItem("list", createListElement;
+sessionStorage.getItem("list");
 // if (sessionStorage.getItem("autosave")) {
 // 	li = sessionStorage.getItem("autosave");
 // }
@@ -96,6 +98,7 @@ function Delete(){
 }
 
 createDeleteButton();
+
 
 
 // const a = "beep";
