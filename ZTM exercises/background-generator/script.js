@@ -3,15 +3,17 @@ var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.querySelector("body");
 
-color1.addEventListener("input", function(){
-	// console.log(color1.value);
-	body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value + ")";
-	h3.textContent = body.style.background;
-})
+function backgroundColor(){
+	var x = body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value + ")";
+	h3.textContent = x;
+	// console.log(x);
+}
 
-color2.addEventListener("input", function(){
-	// console.log(color1.value);
-	body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value + ")";
-	h3.textContent = body.style.background;
-})
+color1.addEventListener("input", backgroundColor());
+
+color2.addEventListener("input", backgroundColor());
+
+color1.addEventListener("input", backgroundColor);
+
+color2.addEventListener("input", backgroundColor);
 
