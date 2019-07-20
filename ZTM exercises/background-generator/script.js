@@ -9,9 +9,10 @@ function backgroundColor(){
 	// console.log(x);
 }
 
-color1.addEventListener("input", backgroundColor());
+// color1.addEventListener("input", backgroundColor());
 
-color2.addEventListener("input", backgroundColor());
+// color2.addEventListener("input", backgroundColor());
+backgroundColor();
 
 // color1.addEventListener("input", backgroundColor);
 
