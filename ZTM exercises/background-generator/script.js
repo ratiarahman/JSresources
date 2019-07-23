@@ -1,8 +1,16 @@
 var h3 = document.querySelector("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
+var color3 = document.getElementById("demo");
+var color4 = document.getElementById("one");
 var body = document.querySelector("body");
 
+function initial(){
+	color3.value = color1.value;
+	color4.value = color2.value;
+}
+
+initial();
 
 function random(){
 	
@@ -11,6 +19,9 @@ function random(){
   	//return x;
   	document.getElementById("demo").value = x;
   	document.getElementById("one").value = y;
+
+  	var z = body.style.background = "linear-gradient(to right," + color3.value + "," + color4.value + ")";
+	h3.textContent = z;
 }
 
 function backgroundColor(){
